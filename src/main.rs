@@ -14,6 +14,7 @@ use stm32::mcu::MCU;
 use stm32::gpio::GPIO;
 use stm32::nvic::NVIC;
 use stm32::dma::DMA;
+use stm32::rcc::RCC;
 
 use std::fs::File;
 use std::fs;
@@ -43,12 +44,20 @@ fn open_nvic() {
     nvic.to_pegasus();
 }
 
-fn main() {
+fn open_dma() {
     let file = File::open("samples/stm32/DMA-STM32F031_dma_v1_0_Modes.xml").unwrap();
 
     let dma: DMA = serde_xml_rs::deserialize(file).unwrap();
 
     println!("{:?}", dma);
+}
+
+fn main() {
+    let file = File::open("samples/stm32/RCC-STM32F0_rcc_v1_0_Modes.xml").unwrap();
+
+    let rcc: RCC = serde_xml_rs::deserialize(file).unwrap();
+
+    println!("{:?}", rcc);
     //dma.to_pegasus();
 
     /*
