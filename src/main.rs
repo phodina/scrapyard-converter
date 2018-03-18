@@ -12,6 +12,7 @@ pub mod pegasus;
 
 use stm32::mcu::MCU;
 use stm32::gpio::GPIO;
+use stm32::nvic::NVIC;
 
 use std::fs::File;
 use std::fs;
@@ -25,12 +26,20 @@ fn open_mcu() {
     let file_json = File::create(Path::new("pegasus.json")).unwrap();
     serde_json::to_writer(file_json, &mcu_pegasus).unwrap();
 }
-fn main() {
+
+fn open_gpio() {
     let file = File::open("samples/stm32/GPIO-STM32F031_gpio_v1_0_Modes.xml").unwrap();
 
     let gpio: GPIO = serde_xml_rs::deserialize(file).unwrap();
     let gpio_pegasus = gpio.to_pegasus();
     println!("{:?}", gpio_pegasus);
+}
+
+fn main() {
+    let file = File::open("samples/stm32/NVIC-STM32F051_Modes.xml").unwrap();
+
+    let nvic: NVIC = serde_xml_rs::deserialize(file).unwrap();
+    nvic.to_pegasus();
     /*
     let paths = fs::read_dir("./samples/stm32").unwrap();
 

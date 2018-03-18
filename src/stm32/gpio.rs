@@ -5,6 +5,7 @@ pub struct GPIO {
     #[serde(rename = "RefParameter")] RefParams: Vec<RefParameter>,
     #[serde(rename = "RefMode")] RefModes: Vec<RefMode>,
     #[serde(rename = "GPIO_Pin")] Pins: Vec<GPIO_Pin>,
+    // TODO: Implement GPIO_Port
 }
 
 #[allow(non_snake_case)]
