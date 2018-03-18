@@ -1,4 +1,5 @@
 extern crate clap;
+extern crate either;
 extern crate serde;
 #[macro_use]
 extern crate serde_derive;
@@ -15,6 +16,7 @@ use stm32::gpio::GPIO;
 use stm32::nvic::NVIC;
 use stm32::dma::DMA;
 use stm32::rcc::RCC;
+use stm32::tim::TIM;
 
 use std::fs::File;
 use std::fs;
@@ -52,12 +54,19 @@ fn open_dma() {
     println!("{:?}", dma);
 }
 
-fn main() {
+fn open_rcc() {
     let file = File::open("samples/stm32/RCC-STM32F0_rcc_v1_0_Modes.xml").unwrap();
 
     let rcc: RCC = serde_xml_rs::deserialize(file).unwrap();
 
     println!("{:?}", rcc);
+}
+fn main() {
+    let file = File::open("samples/stm32/TIM6_7-gptimer2_v2_x_Cube_Modes.xml").unwrap();
+
+    let tim: TIM = serde_xml_rs::deserialize(file).unwrap();
+
+    println!("{:?}", tim);
     //dma.to_pegasus();
 
     /*
