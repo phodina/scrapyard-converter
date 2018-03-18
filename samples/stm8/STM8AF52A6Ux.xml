@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Mcu ClockTree="STM8AF_S" DBVersion="V3.0" Family="STM8AF" HasPowerPad="false" IOType="" Line="STM8AF52" Package="VFQFPN32" RefName="STM8AF52A6Ux" xmlns="http://mcd.rou.st.com/modules.php?name=mcu">
+	<Core>STM8</Core>
+	<Frequency>16</Frequency>
+	<E2prom>2048</E2prom>
+	<Ram>6</Ram>
+	<IONb>25</IONb>
+	<Die>DIE79A</Die>
+	<Flash>128</Flash>
+	<Voltage Max="5.5" Min="3"/>
+	<Current Lowest="5" Run="500"/>
+	<Temperature Max="125" Min="-40"/>
+	<IP InstanceName="ADC" Name="ADC" Version="STM8_adc_v1_0"/>
+	<IP InstanceName="CAN" Name="CAN" Version="bxcan1_v1_0_Cube"/>
+	<IP InstanceName="I2C" Name="I2C" Version="STM8_i2c_v1_0"/>
+	<IP InstanceName="LINUART" Name="LINUART" Version="RM0016"/>
+	<IP InstanceName="RCC" Name="RCC" Version="STM8AF_S_rcc_v1_0"/>
+	<IP InstanceName="SYS" Name="SYS" Version="STM8_sys_v1_0"/>
+	<IP InstanceName="TIM1" Name="TIM" Version="STM8-gptimer_v1_0"/>
+	<IP InstanceName="TIM2" Name="TIM" Version="STM8-gptimer_v1_0"/>
+	<IP InstanceName="TIM3" Name="TIM" Version="STM8-gptimer_v1_0"/>
+	<IP InstanceName="GPIO" Name="GPIO" Version=""/>
+	<Pin Name="NRST" Position="1" Type="Reset"/>
+	<Pin Name="PA1" Position="2" Type="I/O">
+		<Signal Name="RCC_OSCIN"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PA2" Position="3" Type="I/O">
+		<Signal Name="RCC_OSCOUT"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="VSS" Position="4" Type="Power"/>
+	<Pin Name="VCAP" Position="5" Type="Power"/>
+	<Pin Name="VDD" Position="6" Type="Power"/>
+	<Pin Name="VDDIO" Position="7" Type="Power"/>
+	<Pin Name="PA6" Position="8" Type="I/O">
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="VDDA" Position="9" Type="Power"/>
+	<Pin Name="VSSA" Position="10" Type="Power"/>
+	<Pin Name="PB5" Position="11" Type="I/O">
+		<Signal Name="ADC_IN5"/>
+		<Signal Name="I2C_SDA"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+		<Condition Diagnostic="AFR6" Expression="(!(I2C_SDA &amp; PB4_ADC_IN4) &amp; !(ADC_IN5 &amp; PB4_I2C_SCL))"/>
+	</Pin>
+	<Pin Name="PB4" Position="12" Type="I/O">
+		<Signal Name="ADC_IN4"/>
+		<Signal Name="I2C_SCL"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+		<Condition Diagnostic="AFR6" Expression="(!(I2C_SCL &amp; PB5_ADC_IN5) &amp; !(ADC_IN4 &amp; PB5_I2C_SDA))"/>
+	</Pin>
+	<Pin Name="PB3" Position="13" Type="I/O">
+		<Signal Name="ADC_IN3"/>
+		<Signal Name="TIM1_ETR"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+		<Condition Diagnostic="AFR5" Expression="(!(TIM1_ETR &amp; (PB2_ADC_IN2|PB1_ADC_IN1|PB0_ADC_IN0)) &amp; !(ADC_IN3 &amp; (PB2_TIM1_CH3N|PB1_TIM1_CH2N|PB0_TIM1_CH1N)))"/>
+	</Pin>
+	<Pin Name="PB2" Position="14" Type="I/O">
+		<Signal Name="ADC_IN2"/>
+		<Signal Name="TIM1_CH3N"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+		<Condition Diagnostic="AFR5" Expression="(!(TIM1_CH3N &amp; (PB3_ADC_IN3|PB1_ADC_IN1|PB0_ADC_IN0)) &amp; !(ADC_IN2 &amp; (PB3_TIM1_ETR|PB1_TIM1_CH2N|PB0_TIM1_CH1N)))"/>
+	</Pin>
+	<Pin Name="PB1" Position="15" Type="I/O">
+		<Signal Name="ADC_IN1"/>
+		<Signal Name="TIM1_CH2N"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+		<Condition Diagnostic="AFR5" Expression="(!(TIM1_CH2N &amp; (PB3_ADC_IN3|PB2_ADC_IN2|PB0_ADC_IN0)) &amp; !(ADC_IN1 &amp; (PB3_TIM1_ETR|PB2_TIM1_CH3N|PB0_TIM1_CH1N)))"/>
+	</Pin>
+	<Pin Name="PB0" Position="16" Type="I/O">
+		<Signal Name="ADC_IN0"/>
+		<Signal Name="TIM1_CH1N"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+		<Condition Diagnostic="AFR5" Expression="(!(TIM1_CH1N &amp; (PB3_ADC_IN3|PB2_ADC_IN2|PB1_ADC_IN1)) &amp; !(ADC_IN0 &amp; (PB3_TIM1_ETR|PB2_TIM1_CH3N|PB1_TIM1_CH2N)))"/>
+	</Pin>
+	<Pin Name="PE5" Position="17" Type="I/O">
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PC1" Position="18" Type="I/O">
+		<Signal Name="TIM1_CH1"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PC2" Position="19" Type="I/O">
+		<Signal Name="TIM1_CH2"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PC3" Position="20" Type="I/O">
+		<Signal Name="TIM1_CH3"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PC4" Position="21" Type="I/O">
+		<Signal Name="TIM1_CH4"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PC5" Position="22" Type="I/O">
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PG0" Position="23" Type="I/O">
+		<Signal Name="CAN_TX"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PG1" Position="24" Type="I/O">
+		<Signal Name="CAN_RX"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PD0" Position="25" Type="I/O">
+		<Signal Name="RCC_CCO"/>
+		<Signal Name="TIM1_BKIN"/>
+		<Signal Name="TIM3_CH2"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PD1" Position="26" Type="I/O">
+		<Signal Name="SYS_SWIM"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PD2" Position="27" Type="I/O">
+		<Signal Name="TIM2_CH3"/>
+		<Signal Name="TIM3_CH1"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PD3" Position="28" Type="I/O">
+		<Signal Name="ADC_ETR"/>
+		<Signal Name="TIM2_CH2"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PD4" Position="29" Type="I/O">
+		<Signal Name="SYS_BEEP"/>
+		<Signal Name="TIM2_CH1"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PD5" Position="30" Type="I/O">
+		<Signal Name="LINUART_TX"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PD6" Position="31" Type="I/O">
+		<Signal Name="LINUART_RX"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+	<Pin Name="PD7" Position="32" Type="I/O">
+		<Signal Name="SYS_TLI"/>
+		<Signal IOModes="Input,Output,Analog" Name="GPIO"/>
+	</Pin>
+</Mcu>

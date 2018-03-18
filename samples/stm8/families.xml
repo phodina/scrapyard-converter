@@ -1,0 +1,3157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 
+   Copyright 2012 STMicroelectronics
+
+   Licensed under ST Image V2 License, (the "License");
+   You may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.st.com
+
+   Unless required by applicable law or agreed to in writing, software 
+   distributed under the License is distributed on an "AS IS" BASIS, 
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+--> 
+<Families xsi:noNamespaceSchemaLocation="families.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Family Name="STM8AF">
+        <SubFamily Name="STM8AF52">
+            <Mcu Name="STM8AF5268Tx" PackageName="LQFP48" RefName="STM8AF5268Tx" RPN="STM8AF5268">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>38</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF5269Tx" PackageName="LQFP64" RefName="STM8AF5269Tx" RPN="STM8AF5269">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>52</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF5286Ux" PackageName="VFQFPN32" RefName="STM8AF5286Ux" RPN="STM8AF5286">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>25</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="6"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF5288Tx" PackageName="LQFP48" RefName="STM8AF5288Tx" RPN="STM8AF5288">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>38</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF5289Tx" PackageName="LQFP64" RefName="STM8AF5289Tx" RPN="STM8AF5289">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>52</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF528ATx" PackageName="LQFP80" RefName="STM8AF528ATx" RPN="STM8AF528A">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>68</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF52A6Ux" PackageName="VFQFPN32" RefName="STM8AF52A6Ux" RPN="STM8AF52A6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>25</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="6"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF52A8Tx" PackageName="LQFP48" RefName="STM8AF52A8Tx" RPN="STM8AF52A8">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>38</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF52A9Tx" PackageName="LQFP64" RefName="STM8AF52A9Tx" RPN="STM8AF52A9">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>52</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF52AATx" PackageName="LQFP80" RefName="STM8AF52AATx" RPN="STM8AF52AA">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>68</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+        </SubFamily>
+        <SubFamily Name="STM8AF62">
+            <Mcu Name="STM8AF6213Px" PackageName="TSSOP20" RefName="STM8AF6213Px" RPN="STM8AF6213">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="125.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6223IPx" PackageName="TSSOP20" RefName="STM8AF6223IPx" RPN="STM8AF6223">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="125.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6223Px" PackageName="TSSOP20" RefName="STM8AF6223Px" RPN="STM8AF6223">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="125.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6223PxAx" PackageName="TSSOP20" RefName="STM8AF6223PxAx" RPN="STM8AF6223">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="125.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6226ITx" PackageName="LQFP32" RefName="STM8AF6226ITx" RPN="STM8AF6226">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>640</E2prom>
+                <IONb>28</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="125.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6226Tx" PackageName="LQFP32" RefName="STM8AF6226Tx" RPN="STM8AF6226">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>640</E2prom>
+                <IONb>28</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="125.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6246Tx" PackageName="LQFP32" RefName="STM8AF6246Tx" RPN="STM8AF6246">
+                <Frequency>24</Frequency>
+                <Ram>2</Ram>
+                <E2prom>512</E2prom>
+                <IONb>25</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6246Ux" PackageName="VFQFPN32" RefName="STM8AF6246Ux" RPN="STM8AF6246">
+                <Frequency>24</Frequency>
+                <Ram>2</Ram>
+                <E2prom>512</E2prom>
+                <IONb>25</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6248Tx" PackageName="LQFP48" RefName="STM8AF6248Tx" RPN="STM8AF6248">
+                <Frequency>24</Frequency>
+                <Ram>2</Ram>
+                <E2prom>512</E2prom>
+                <IONb>38</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6266ITx" PackageName="LQFP32" RefName="STM8AF6266ITx" RPN="STM8AF6266">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6266Tx" PackageName="LQFP32" RefName="STM8AF6266Tx" RPN="STM8AF6266">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6266Ux" PackageName="VFQFPN32" RefName="STM8AF6266Ux" RPN="STM8AF6266">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6268Tx" PackageName="LQFP48" RefName="STM8AF6268Tx" RPN="STM8AF6268">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>38</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6269Tx" PackageName="LQFP64" RefName="STM8AF6269Tx" RPN="STM8AF6269">
+                <Frequency>16</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>52</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6286Tx" PackageName="LQFP32" RefName="STM8AF6286Tx" RPN="STM8AF6286">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>25</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6288Tx" PackageName="LQFP48" RefName="STM8AF6288Tx" RPN="STM8AF6288">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>38</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF6289Tx" PackageName="LQFP64" RefName="STM8AF6289Tx" RPN="STM8AF6289">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>52</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF628ATx" PackageName="LQFP80" RefName="STM8AF628ATx" RPN="STM8AF628A">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>68</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF62A6Ux" PackageName="VFQFPN32" RefName="STM8AF62A6Ux" RPN="STM8AF62A6">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>25</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF62A8Tx" PackageName="LQFP48" RefName="STM8AF62A8Tx" RPN="STM8AF62A8">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>38</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF62A9Tx" PackageName="LQFP64" RefName="STM8AF62A9Tx" RPN="STM8AF62A9">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>52</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AF62AATx" PackageName="LQFP80" RefName="STM8AF62AATx" RPN="STM8AF62AA">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>68</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="3.0"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="LINUART" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+        </SubFamily>
+    </Family>
+    <Family Name="STM8AL">
+        <SubFamily Name="STM8AL31">
+            <Mcu Name="STM8AL3136Tx" PackageName="LQFP32" RefName="STM8AL3136Tx" RPN="STM8AL3136">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>29</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3138Tx" PackageName="LQFP48" RefName="STM8AL3138Tx" RPN="STM8AL3138">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>41</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3146Tx" PackageName="LQFP32" RefName="STM8AL3146Tx" RPN="STM8AL3146">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>29</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3148Tx" PackageName="LQFP48" RefName="STM8AL3148Tx" RPN="STM8AL3148">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>41</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3166Tx" PackageName="LQFP32" RefName="STM8AL3166Tx" RPN="STM8AL3166">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>29</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3166Ux" PackageName="VFQFPN32" RefName="STM8AL3166Ux" RPN="STM8AL3166">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>29</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3168Tx" PackageName="LQFP48" RefName="STM8AL3168Tx" RPN="STM8AL3168">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>41</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3188Tx" PackageName="LQFP48" RefName="STM8AL3188Tx" RPN="STM8AL3188">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>41</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL3189Tx" PackageName="LQFP64" RefName="STM8AL3189Tx" RPN="STM8AL3189">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>54</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL318ATx" PackageName="LQFP80" RefName="STM8AL318ATx" RPN="STM8AL318A">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>68</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="28"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL31E88Tx" PackageName="LQFP48" RefName="STM8AL31E88Tx" RPN="STM8AL31E88">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>41</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL31E89Tx" PackageName="LQFP64" RefName="STM8AL31E89Tx" RPN="STM8AL31E89">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>54</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL31E8ATx" PackageName="LQFP80" RefName="STM8AL31E8ATx" RPN="STM8AL31E8A">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>68</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="28"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+        </SubFamily>
+        <SubFamily Name="STM8AL3L">
+            <Mcu Name="STM8AL3L46Tx" PackageName="LQFP32" RefName="STM8AL3L46Tx" RPN="STM8AL3L46">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>28</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="21"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3L48Tx" PackageName="LQFP48" RefName="STM8AL3L48Tx" RPN="STM8AL3L48">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>40</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3L66Tx" PackageName="LQFP32" RefName="STM8AL3L66Tx" RPN="STM8AL3L66">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>28</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="21"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3L68Tx" PackageName="LQFP48" RefName="STM8AL3L68Tx" RPN="STM8AL3L68">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>40</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8AL3L88Tx" PackageName="LQFP48" RefName="STM8AL3L88Tx" RPN="STM8AL3L88">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>40</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL3L89Tx" PackageName="LQFP64" RefName="STM8AL3L89Tx" RPN="STM8AL3L89">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>53</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL3L8ATx" PackageName="LQFP80" RefName="STM8AL3L8ATx" RPN="STM8AL3L8A">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>67</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="28"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL3LE88Tx" PackageName="LQFP48" RefName="STM8AL3LE88Tx" RPN="STM8AL3LE88">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>40</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL3LE89Tx" PackageName="LQFP64" RefName="STM8AL3LE89Tx" RPN="STM8AL3LE89">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>53</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8AL3LE8ATx" PackageName="LQFP80" RefName="STM8AL3LE8ATx" RPN="STM8AL3LE8A">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2000</E2prom>
+                <IONb>67</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="28"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+        </SubFamily>
+    </Family>
+    <Family Name="STM8L">
+        <SubFamily Name="STM8L051/052 Value Line">
+            <Mcu Name="STM8L051F3Px" PackageName="TSSOP20" RefName="STM8L051F3Px" RPN="STM8L051F3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>17</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L052C6Tx" PackageName="LQFP48" RefName="STM8L052C6Tx" RPN="STM8L052C6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>256</E2prom>
+                <IONb>40</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L052R8Tx" PackageName="LQFP64" RefName="STM8L052R8Tx" RPN="STM8L052R8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>256</E2prom>
+                <IONb>53</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.8"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+        </SubFamily>
+        <SubFamily Name="STM8L101">
+            <Mcu Name="STM8L101F1UxA" PackageName="UFQFPN20" RefName="STM8L101F1UxA" RPN="STM8L101F1">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>17</IONb>
+                <Flash>2</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101F2Px" PackageName="TSSOP20" RefName="STM8L101F2Px" RPN="STM8L101F2">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>17</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101F2Ux" PackageName="UFQFPN20" RefName="STM8L101F2Ux" RPN="STM8L101F2">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>17</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101F2UxA" PackageName="UFQFPN20" RefName="STM8L101F2UxA" RPN="STM8L101F2">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>17</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101F3Px" PackageName="TSSOP20" RefName="STM8L101F3Px" RPN="STM8L101F3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>17</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101F3Ux" PackageName="UFQFPN20" RefName="STM8L101F3Ux" RPN="STM8L101F3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>17</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101F3UxA" PackageName="UFQFPN20" RefName="STM8L101F3UxA" RPN="STM8L101F3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>17</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101G2Ux" PackageName="UFQFPN28" RefName="STM8L101G2Ux" RPN="STM8L101G2">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>25</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101G2UxA" PackageName="UFQFPN28" RefName="STM8L101G2UxA" RPN="STM8L101G2">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>25</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101G3Ux" PackageName="UFQFPN28" RefName="STM8L101G3Ux" RPN="STM8L101G3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>25</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101G3UxA" PackageName="UFQFPN28" RefName="STM8L101G3UxA" RPN="STM8L101G3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>25</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101K3Tx" PackageName="LQFP32" RefName="STM8L101K3Tx" RPN="STM8L101K3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>29</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L101K3Ux" PackageName="UFQFPN32" RefName="STM8L101K3Ux" RPN="STM8L101K3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <IONb>29</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.3" Run="150.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+        </SubFamily>
+        <SubFamily Name="STM8L151/152">
+            <Mcu Name="STM8L151C2Tx" PackageName="LQFP48" RefName="STM8L151C2Tx" RPN="STM8L151C2">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>41</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="28"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151C3Tx" PackageName="LQFP48" RefName="STM8L151C3Tx" RPN="STM8L151C3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>41</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="28"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151C4Tx" PackageName="LQFP48" RefName="STM8L151C4Tx" RPN="STM8L151C4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>41</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151C4Ux" PackageName="UFQFPN48" RefName="STM8L151C4Ux" RPN="STM8L151C4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>41</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151C6Tx" PackageName="LQFP48" RefName="STM8L151C6Tx" RPN="STM8L151C6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>41</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151C6Ux" PackageName="UFQFPN48" RefName="STM8L151C6Ux" RPN="STM8L151C6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>41</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151C8Tx" PackageName="LQFP48" RefName="STM8L151C8Tx" RPN="STM8L151C8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>41</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L151C8Ux" PackageName="UFQFPN48" RefName="STM8L151C8Ux" RPN="STM8L151C8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>41</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L151F2Px" PackageName="TSSOP20" RefName="STM8L151F2Px" RPN="STM8L151F2">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>17</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="10"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151F2Ux" PackageName="UFQFPN20" RefName="STM8L151F2Ux" RPN="STM8L151F2">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>17</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="10"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151F3Px" PackageName="TSSOP20" RefName="STM8L151F3Px" RPN="STM8L151F3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>17</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="10"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151F3Ux" PackageName="UFQFPN20" RefName="STM8L151F3Ux" RPN="STM8L151F3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>17</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="10"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151G2Ux" PackageName="UFQFPN28" RefName="STM8L151G2Ux" RPN="STM8L151G2">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>25</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="18"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151G3Ux" PackageName="UFQFPN28" RefName="STM8L151G3Ux" RPN="STM8L151G3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>25</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="18"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151G4Ux" PackageName="UFQFPN28" RefName="STM8L151G4Ux" RPN="STM8L151G4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="18"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151G4Yx" PackageName="WLCSP28" RefName="STM8L151G4Yx" RPN="STM8L151G4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="18"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151G6Ux" PackageName="UFQFPN28" RefName="STM8L151G6Ux" RPN="STM8L151G6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="18"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151G6Yx" PackageName="WLCSP28" RefName="STM8L151G6Yx" RPN="STM8L151G6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="18"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151K2Ux" PackageName="UFQFPN32" RefName="STM8L151K2Ux" RPN="STM8L151K2">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>29</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151K3Ux" PackageName="UFQFPN32" RefName="STM8L151K3Ux" RPN="STM8L151K3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>256</E2prom>
+                <IONb>29</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151K4Tx" PackageName="LQFP32" RefName="STM8L151K4Tx" RPN="STM8L151K4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>29</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151K4Ux" PackageName="UFQFPN32" RefName="STM8L151K4Ux" RPN="STM8L151K4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>29</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151K6Tx" PackageName="LQFP32" RefName="STM8L151K6Tx" RPN="STM8L151K6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>29</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151K6Ux" PackageName="UFQFPN32" RefName="STM8L151K6Ux" RPN="STM8L151K6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>29</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="22"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L151M8Tx" PackageName="LQFP80" RefName="STM8L151M8Tx" RPN="STM8L151M8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>68</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="28"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L151R6Tx" PackageName="LQFP64" RefName="STM8L151R6Tx" RPN="STM8L151R6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>54</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L151R8Tx" PackageName="LQFP64" RefName="STM8L151R8Tx" RPN="STM8L151R8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>54</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L152C4Tx" PackageName="LQFP48" RefName="STM8L152C4Tx" RPN="STM8L152C4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>40</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L152C4Ux" PackageName="UFQFPN48" RefName="STM8L152C4Ux" RPN="STM8L152C4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>40</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="195.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L152C6Tx" PackageName="LQFP48" RefName="STM8L152C6Tx" RPN="STM8L152C6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>40</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L152C6Ux" PackageName="UFQFPN48" RefName="STM8L152C6Ux" RPN="STM8L152C6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>40</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L152C8Tx" PackageName="LQFP48" RefName="STM8L152C8Tx" RPN="STM8L152C8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>40</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L152C8Ux" PackageName="UFQFPN48" RefName="STM8L152C8Ux" RPN="STM8L152C8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>40</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="25"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L152K4Tx" PackageName="LQFP32" RefName="STM8L152K4Tx" RPN="STM8L152K4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>28</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="21"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L152K4Ux" PackageName="UFQFPN32" RefName="STM8L152K4Ux" RPN="STM8L152K4">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>28</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="21"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L152K6Tx" PackageName="LQFP32" RefName="STM8L152K6Tx" RPN="STM8L152K6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>28</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="21"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L152K6Ux" PackageName="UFQFPN32" RefName="STM8L152K6Ux" RPN="STM8L152K6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>28</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.35" Run="180.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="21"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8L152K8Yx" PackageName="WLCSP32" RefName="STM8L152K8Yx" RPN="STM8L152K8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>27</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="18"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8L152M8Tx" PackageName="LQFP80" RefName="STM8L152M8Tx" RPN="STM8L152M8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>67</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="28"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L152R6Tx" PackageName="LQFP64" RefName="STM8L152R6Tx" RPN="STM8L152R6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>53</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L152R8Tx" PackageName="LQFP64" RefName="STM8L152R8Tx" RPN="STM8L152R8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>53</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+        </SubFamily>
+        <SubFamily Name="STM8L162">
+            <Mcu Name="STM8L162M8Tx" PackageName="LQFP80" RefName="STM8L162M8Tx" RPN="STM8L162M8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>67</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="28"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+            <Mcu Name="STM8L162R8Tx" PackageName="LQFP64" RefName="STM8L162R8Tx" RPN="STM8L162R8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>4</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>53</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="3.6" Min="1.65"/>
+                <Current Lowest="0.4" Run="200.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 12-bit" MaxOccurs="26"/>
+                <Peripheral Type="COMP" MaxOccurs="2"/>
+                <Peripheral Type="DAC 12-bit" MaxOccurs="2"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="IRTIM" MaxOccurs="1"/>
+                <Peripheral Type="RTC" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="2"/>
+                <Peripheral Type="Segment LCD" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="4"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="USART" MaxOccurs="3"/>
+            </Mcu>
+        </SubFamily>
+    </Family>
+    <Family Name="STM8S">
+        <SubFamily Name="STM8S Application Specific Line">
+            <Mcu Name="STM8S903F3Mx" PackageName="SO20" RefName="STM8S903F3Mx" RPN="STM8S903F3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S903F3Px" PackageName="TSSOP20" RefName="STM8S903F3Px" RPN="STM8S903F3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S903F3Ux" PackageName="UFQFPN20" RefName="STM8S903F3Ux" RPN="STM8S903F3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S903K3Bx" PackageName="SDIP32" RefName="STM8S903K3Bx" RPN="STM8S903K3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>28</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S903K3Tx" PackageName="LQFP32" RefName="STM8S903K3Tx" RPN="STM8S903K3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>28</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S903K3Ux" PackageName="UFQFPN32" RefName="STM8S903K3Ux" RPN="STM8S903K3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>28</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+        </SubFamily>
+        <SubFamily Name="STM8S003/005/007 Value Line">
+            <Mcu Name="STM8S003F3Px" PackageName="TSSOP20" RefName="STM8S003F3Px" RPN="STM8S003F3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>128</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S003F3Ux" PackageName="UFQFPN20" RefName="STM8S003F3Ux" RPN="STM8S003F3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>128</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S003K3Tx" PackageName="LQFP32" RefName="STM8S003K3Tx" RPN="STM8S003K3">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>128</E2prom>
+                <IONb>28</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="4"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S005C6Tx" PackageName="LQFP48" RefName="STM8S005C6Tx" RPN="STM8S005C6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>128</E2prom>
+                <IONb>38</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S005K6Tx" PackageName="LQFP32" RefName="STM8S005K6Tx" RPN="STM8S005K6">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>128</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S007C8Tx" PackageName="LQFP48" RefName="STM8S007C8Tx" RPN="STM8S007C8">
+                <Core>STM8</Core>
+                <Frequency>16</Frequency>
+                <Ram>6</Ram>
+                <E2prom>128</E2prom>
+                <IONb>38</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+        </SubFamily>
+        <SubFamily Name="STM8S103/105">
+            <Mcu Name="STM8S103F2Mx" PackageName="SO20" RefName="STM8S103F2Mx" RPN="STM8S103F2">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S103F2Px" PackageName="TSSOP20" RefName="STM8S103F2Px" RPN="STM8S103F2">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S103F2Ux" PackageName="UFQFPN20" RefName="STM8S103F2Ux" RPN="STM8S103F2">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>4</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S103F3Mx" PackageName="SO20" RefName="STM8S103F3Mx" RPN="STM8S103F3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S103F3Px" PackageName="TSSOP20" RefName="STM8S103F3Px" RPN="STM8S103F3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S103F3Ux" PackageName="UFQFPN20" RefName="STM8S103F3Ux" RPN="STM8S103F3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>16</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="5"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S103K3Bx" PackageName="SDIP32" RefName="STM8S103K3Bx" RPN="STM8S103K3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>28</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="4"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S103K3Tx" PackageName="LQFP32" RefName="STM8S103K3Tx" RPN="STM8S103K3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>28</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="4"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S103K3Ux" PackageName="UFQFPN32" RefName="STM8S103K3Ux" RPN="STM8S103K3">
+                <Frequency>16</Frequency>
+                <Ram>1</Ram>
+                <E2prom>640</E2prom>
+                <IONb>28</IONb>
+                <Flash>8</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="230.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="4"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="2"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105C4Tx" PackageName="LQFP48" RefName="STM8S105C4Tx" RPN="STM8S105C4">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>38</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105C6Tx" PackageName="LQFP48" RefName="STM8S105C6Tx" RPN="STM8S105C6">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>38</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105K4Bx" PackageName="SDIP32" RefName="STM8S105K4Bx" RPN="STM8S105K4">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105K4Tx" PackageName="LQFP32" RefName="STM8S105K4Tx" RPN="STM8S105K4">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105K4Ux" PackageName="UFQFPN32" RefName="STM8S105K4Ux" RPN="STM8S105K4">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105K6Bx" PackageName="SDIP32" RefName="STM8S105K6Bx" RPN="STM8S105K6">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105K6Tx" PackageName="LQFP32" RefName="STM8S105K6Tx" RPN="STM8S105K6">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105K6Ux" PackageName="UFQFPN32" RefName="STM8S105K6Ux" RPN="STM8S105K6">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105S4Tx" PackageName="LQFP44" RefName="STM8S105S4Tx" RPN="STM8S105S4">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>34</IONb>
+                <Flash>16</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="9"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S105S6Tx" PackageName="LQFP44" RefName="STM8S105S6Tx" RPN="STM8S105S6">
+                <Frequency>16</Frequency>
+                <Ram>2</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>34</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="430.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="9"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+        </SubFamily>
+        <SubFamily Name="STM8S207/208">
+            <Mcu Name="STM8S207C6Tx" PackageName="LQFP48" RefName="STM8S207C6Tx" RPN="STM8S207C6">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>38</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207C8Tx" PackageName="LQFP48" RefName="STM8S207C8Tx" RPN="STM8S207C8">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1536</E2prom>
+                <IONb>38</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207CBTx" PackageName="LQFP48" RefName="STM8S207CBTx" RPN="STM8S207CB">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>38</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207K6Tx" PackageName="LQFP32" RefName="STM8S207K6Tx" RPN="STM8S207K6">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S207K8Tx" PackageName="LQFP32" RefName="STM8S207K8Tx" RPN="STM8S207K8">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>25</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="7"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="1"/>
+            </Mcu>
+            <Mcu Name="STM8S207M8Tx" PackageName="LQFP80" RefName="STM8S207M8Tx" RPN="STM8S207M8">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>68</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207MBTx" PackageName="LQFP80" RefName="STM8S207MBTx" RPN="STM8S207MB">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>68</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207R6Tx" PackageName="LQFP64" RefName="STM8S207R6Tx" RPN="STM8S207R6">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>52</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207R8Tx" PackageName="LQFP64" RefName="STM8S207R8Tx" RPN="STM8S207R8">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1536</E2prom>
+                <IONb>52</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207RBTx" PackageName="LQFP64" RefName="STM8S207RBTx" RPN="STM8S207RB">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>52</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207S6Tx" PackageName="LQFP44" RefName="STM8S207S6Tx" RPN="STM8S207S6">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1024</E2prom>
+                <IONb>34</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="9"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207S8Tx" PackageName="LQFP44" RefName="STM8S207S8Tx" RPN="STM8S207S8">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1536</E2prom>
+                <IONb>34</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="9"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S207SBTx" PackageName="LQFP44" RefName="STM8S207SBTx" RPN="STM8S207SB">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1536</E2prom>
+                <IONb>34</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="9"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208C6Tx" PackageName="LQFP48" RefName="STM8S208C6Tx" RPN="STM8S208C6">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>38</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208C8Tx" PackageName="LQFP48" RefName="STM8S208C8Tx" RPN="STM8S208C8">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>38</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208CBTx" PackageName="LQFP48" RefName="STM8S208CBTx" RPN="STM8S208CB">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>38</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="10"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208MBTx" PackageName="LQFP80" RefName="STM8S208MBTx" RPN="STM8S208MB">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>68</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208R6Tx" PackageName="LQFP64" RefName="STM8S208R6Tx" RPN="STM8S208R6">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>52</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208R8Tx" PackageName="LQFP64" RefName="STM8S208R8Tx" RPN="STM8S208R8">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>52</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="85.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208RBTx" PackageName="LQFP64" RefName="STM8S208RBTx" RPN="STM8S208RB">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>2048</E2prom>
+                <IONb>52</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="16"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208S6Tx" PackageName="LQFP44" RefName="STM8S208S6Tx" RPN="STM8S208S6">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1536</E2prom>
+                <IONb>34</IONb>
+                <Flash>32</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Max="125.0" Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="9"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208S8Tx" PackageName="LQFP44" RefName="STM8S208S8Tx" RPN="STM8S208S8">
+                <Core>STM8</Core>
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1536</E2prom>
+                <IONb>34</IONb>
+                <Flash>64</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="9"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+            <Mcu Name="STM8S208SBTx" PackageName="LQFP44" RefName="STM8S208SBTx" RPN="STM8S208SB">
+                <Frequency>24</Frequency>
+                <Ram>6</Ram>
+                <E2prom>1536</E2prom>
+                <IONb>34</IONb>
+                <Flash>128</Flash>
+                <Voltage Max="5.5" Min="2.95"/>
+                <Current Lowest="5.0" Run="500.0"/>
+                <Temperature Min="-40.0"/>
+                <Peripheral Type="ADC 10-bit" MaxOccurs="9"/>
+                <Peripheral Type="CAN" MaxOccurs="1"/>
+                <Peripheral Type="I2C" MaxOccurs="1"/>
+                <Peripheral Type="SPI" MaxOccurs="1"/>
+                <Peripheral Type="Timer 16-bit" MaxOccurs="3"/>
+                <Peripheral Type="Timer 8-bit" MaxOccurs="1"/>
+                <Peripheral Type="UART" MaxOccurs="2"/>
+            </Mcu>
+        </SubFamily>
+    </Family>
+</Families>
