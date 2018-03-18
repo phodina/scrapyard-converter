@@ -13,6 +13,7 @@ pub mod pegasus;
 use stm32::mcu::MCU;
 use stm32::gpio::GPIO;
 use stm32::nvic::NVIC;
+use stm32::dma::DMA;
 
 use std::fs::File;
 use std::fs;
@@ -35,11 +36,21 @@ fn open_gpio() {
     println!("{:?}", gpio_pegasus);
 }
 
-fn main() {
+fn open_nvic() {
     let file = File::open("samples/stm32/NVIC-STM32F051_Modes.xml").unwrap();
 
     let nvic: NVIC = serde_xml_rs::deserialize(file).unwrap();
     nvic.to_pegasus();
+}
+
+fn main() {
+    let file = File::open("samples/stm32/DMA-STM32F031_dma_v1_0_Modes.xml").unwrap();
+
+    let dma: DMA = serde_xml_rs::deserialize(file).unwrap();
+
+    println!("{:?}", dma);
+    //dma.to_pegasus();
+
     /*
     let paths = fs::read_dir("./samples/stm32").unwrap();
 
