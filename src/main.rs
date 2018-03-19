@@ -1,5 +1,8 @@
 extern crate clap;
 extern crate either;
+#[macro_use]
+extern crate lazy_static;
+extern crate regex;
 extern crate serde;
 #[macro_use]
 extern crate serde_derive;
@@ -22,8 +25,17 @@ use std::fs::File;
 use std::fs;
 use std::path::Path;
 
-fn open_mcu() {
+fn open_mcu_linear() {
     let file = File::open("samples/stm32/STM32F030C6Tx.xml").unwrap();
+    let mcu: MCU = serde_xml_rs::deserialize(file).unwrap();
+    let mcu_pegasus = mcu.to_pegasus();
+
+    let file_json = File::create(Path::new("pegasus.json")).unwrap();
+    serde_json::to_writer(file_json, &mcu_pegasus).unwrap();
+}
+
+fn open_mcu_grid() {
+    let file = File::open("samples/stm32/STM32F417I(E-G)Hx.xml").unwrap();
     let mcu: MCU = serde_xml_rs::deserialize(file).unwrap();
     let mcu_pegasus = mcu.to_pegasus();
 
@@ -61,14 +73,17 @@ fn open_rcc() {
 
     println!("{:?}", rcc);
 }
-fn main() {
+
+fn open_tim() {
     let file = File::open("samples/stm32/TIM6_7-gptimer2_v2_x_Cube_Modes.xml").unwrap();
 
     let tim: TIM = serde_xml_rs::deserialize(file).unwrap();
 
     println!("{:?}", tim);
-    //dma.to_pegasus();
+}
 
+fn main() {
+    open_mcu_grid();
     /*
     let paths = fs::read_dir("./samples/stm32").unwrap();
 

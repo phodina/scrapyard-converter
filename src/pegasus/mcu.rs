@@ -1,5 +1,6 @@
 use mcu::mcu::Memory;
 use mcu::package::Package;
+use mcu::pin::Position;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct MCU {
@@ -35,7 +36,6 @@ pub struct IP {
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Pin {
     pub name: String,
-    // TODO: Change to Position and implement parsing through regex
-    pub position: String,
+    pub position: Position,
     pub type_t: String,
 }
