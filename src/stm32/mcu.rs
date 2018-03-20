@@ -34,7 +34,7 @@ struct Signal {
 #[serde(rename = "Mcu")]
 #[derive(Debug, Deserialize)]
 pub struct MCU {
-    ClockTree: String,
+    //ClockTree: String,
     Family: String,
     Line: String,
     Package: String,
@@ -50,7 +50,7 @@ pub struct MCU {
 }
 
 impl MCU {
-    pub fn to_pegasus(self) -> ::pegasus::mcu::MCU {
+    pub fn to_pegasus(self) -> ::mcu::mcu::MCU {
 
         let mut memories = Vec::new();
 
@@ -73,13 +73,13 @@ impl MCU {
 
         let package = Package::new(&self.Package);
 
-        let mut ips: Vec<::pegasus::mcu::IP> = Vec::new();
+        let mut ips: Vec<::mcu::mcu::IP> = Vec::new();
 
         for ip in self.IPs {
-            ips.push(::pegasus::mcu::IP::from(ip));
+            ips.push(::mcu::mcu::IP{ name: ip.Name, config_file: ip.Version});
         }
 
-        let mut pins: Vec<::pegasus::mcu::Pin> = Vec::new();
+        let mut pins: Vec<::mcu::mcu::Pin> = Vec::new();
 
         for pin in self.Pin {
             let pos = if package.is_grid() {
@@ -115,7 +115,7 @@ impl MCU {
                 Position::Linear(pin.Position.parse::<u16>().unwrap())
             };
 
-            let p = ::pegasus::mcu::Pin {
+            let p = ::mcu::mcu::Pin {
                 name: pin.Name,
                 position: pos,
                 type_t: pin.Type,
@@ -124,7 +124,7 @@ impl MCU {
             pins.push(p);
         }
 
-        ::pegasus::mcu::MCU {
+        ::mcu::mcu::MCU {
             memory: memories,
             frequency: self.Frequency as u32,
             core: self.Core,
@@ -132,15 +132,6 @@ impl MCU {
             package: package,
             ips: ips,
             pins: pins,
-        }
-    }
-}
-
-impl From<IP> for ::pegasus::mcu::IP {
-    fn from(ip: IP) -> Self {
-        ::pegasus::mcu::IP {
-            config_file: ip.Version,
-            name: ip.Name,
         }
     }
 }

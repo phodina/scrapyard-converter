@@ -44,6 +44,9 @@ struct SpecificParameter {
 }
 
 impl GPIO {
+
+    pub fn to_pegasus(self) {}
+    /*
     pub fn to_pegasus(self) -> ::pegasus::gpio::GPIO {
         let mut pins: Vec<::pegasus::gpio::Pin> = Vec::new();
         for pin in self.Pins {
@@ -67,5 +70,5 @@ impl GPIO {
         }
 
         ::pegasus::gpio::GPIO { pins: pins }
-    }
+    }*/
 }

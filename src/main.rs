@@ -13,7 +13,6 @@ extern crate serde_xml_rs;
 extern crate mcu;
 
 pub mod stm32;
-pub mod pegasus;
 
 use clap::{Arg, App};
 use regex::Regex;
@@ -29,6 +28,8 @@ use std::fs::File;
 use std::fs;
 use std::path::Path;
 
+use mcu::MCUBuilder;
+
 fn open_mcu(path: &Path) {
     let file = File::open(path).unwrap();
     let mcu: MCU = serde_xml_rs::deserialize(file).unwrap();
@@ -42,15 +43,15 @@ fn open_gpio(path: &Path) {
     let file = File::open(path).unwrap();
 
     let gpio: GPIO = serde_xml_rs::deserialize(file).unwrap();
-    let gpio_pegasus = gpio.to_pegasus();
-    println!("{:?}", gpio_pegasus);
+    //let gpio_pegasus = gpio.to_pegasus();
+    //println!("{:?}", gpio_pegasus);
 }
 
 fn open_nvic(path: &Path) {
     let file = File::open(path).unwrap();
 
     let nvic: NVIC = serde_xml_rs::deserialize(file).unwrap();
-    nvic.to_pegasus();
+    //nvic.to_pegasus();
 }
 
 fn open_dma(path: &Path) {
@@ -58,7 +59,7 @@ fn open_dma(path: &Path) {
 
     let dma: DMA = serde_xml_rs::deserialize(file).unwrap();
 
-    println!("{:?}", dma);
+    //println!("{:?}", dma);
 }
 
 fn open_rcc(path: &Path) {
@@ -66,7 +67,7 @@ fn open_rcc(path: &Path) {
 
     let rcc: RCC = serde_xml_rs::deserialize(file).unwrap();
 
-    println!("{:?}", rcc);
+    //println!("{:?}", rcc);
 }
 
 fn open_tim(path: &Path) {
@@ -74,7 +75,7 @@ fn open_tim(path: &Path) {
 
     let tim: TIM = serde_xml_rs::deserialize(file).unwrap();
 
-    println!("{:?}", tim);
+    //println!("{:?}", tim);
 }
 
 fn main() {
@@ -84,14 +85,15 @@ fn main() {
     let entries = fs::read_dir("./samples/stm32").unwrap();
 
     lazy_static! {
-        static ref RE :Regex = Regex::new(r"(families)|(STM32[FL]\d{3})|(UART)|(TIM)|(GPIO)|(NVIC)|(RCC)").unwrap();
+        static ref RE :Regex = Regex::new(r"(families)|(^STM32[FL]\d{3})|(UART)|(TIM)|(GPIO)|(NVIC)|(RCC)").unwrap();
     }
 
     for entry in entries {
         let path = entry.unwrap().path();
         if path.is_file() {
-            let name = &path.to_str().unwrap();
-            let caps = RE.captures(name);
+            let filename =  path.file_name().unwrap().to_str().unwrap();
+            println!("Filename: {}", filename);
+            let caps = RE.captures(filename);
 
             for cap in caps {
                 // Families
