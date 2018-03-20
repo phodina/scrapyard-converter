@@ -51,7 +51,7 @@ pub struct MCU {
 
 impl MCU {
     pub fn to_pegasus(self) -> ::pegasus::mcu::MCU {
-        // FIXME: Handle all memory chunks
+
         let mut memories = Vec::new();
 
         for flash in self.Flash {
