@@ -28,8 +28,6 @@ use std::fs::File;
 use std::fs;
 use std::path::Path;
 
-use mcu::MCUBuilder;
-
 fn open_mcu(path: &Path) {
     let file = File::open(path).unwrap();
     let mcu: MCU = serde_xml_rs::deserialize(file).unwrap();

@@ -1,6 +1,7 @@
-use mcu::mcu::Memory;
+use mcu::memory::Memory;
 use mcu::package::Package;
 use mcu::pin::Position;
+use mcu::pin::PinBuilder;
 
 use regex::Regex;
 
@@ -34,7 +35,7 @@ struct Signal {
 #[serde(rename = "Mcu")]
 #[derive(Debug, Deserialize)]
 pub struct MCU {
-    //ClockTree: String,
+    ClockTree: String,
     Family: String,
     Line: String,
     Package: String,
@@ -46,7 +47,7 @@ pub struct MCU {
     Die: String,
     Flash: Vec<i32>,
     #[serde(rename = "IP")] IPs: Vec<IP>,
-    Pin: Vec<Pin>,
+    #[serde(rename = "Pin")] Pins: Vec<Pin>,
 }
 
 impl MCU {
@@ -73,15 +74,15 @@ impl MCU {
 
         let package = Package::new(&self.Package);
 
-        let mut ips: Vec<::mcu::mcu::IP> = Vec::new();
+        let mut ips: Vec<::mcu::mcu::IP> = Vec::with_capacity(self.IPs.len());
 
         for ip in self.IPs {
             ips.push(::mcu::mcu::IP{ name: ip.Name, config_file: ip.Version});
         }
 
-        let mut pins: Vec<::mcu::mcu::Pin> = Vec::new();
+        let mut pins: Vec<::mcu::pin::Pin> = Vec::with_capacity(self.Pins.len());
 
-        for pin in self.Pin {
+        for pin in self.Pins {
             let pos = if package.is_grid() {
                 lazy_static! {
                     static ref RE :Regex = Regex::new(r"([[:alpha:]])(\d*)").unwrap();
@@ -115,12 +116,21 @@ impl MCU {
                 Position::Linear(pin.Position.parse::<u16>().unwrap())
             };
 
-            let p = ::mcu::mcu::Pin {
-                name: pin.Name,
-                position: pos,
-                type_t: pin.Type,
-            };
+            let mut pin2store = PinBuilder::new(&pin.Type, pos, &pin.Name);
 
+            if let Some(signals) = pin.Signals {
+
+                let mut sigs: Vec<String> = Vec::new();
+                for sig in signals {
+                    if let Some(name) = sig.Name {
+                        sigs.push(name);
+                    };
+                }
+
+                pin2store = pin2store.signals(sigs);
+            }
+
+            let p = pin2store.finish();
             pins.push(p);
         }
 
