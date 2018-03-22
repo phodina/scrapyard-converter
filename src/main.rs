@@ -14,7 +14,7 @@ extern crate mcu;
 
 pub mod stm32;
 
-use clap::{Arg, App};
+use clap::{App, Arg};
 use regex::Regex;
 
 use stm32::mcu::MCU;
@@ -77,10 +77,32 @@ fn open_tim(path: &Path) {
 }
 
 fn main() {
+    let matches = App::new("converter")
+        .author(crate_authors!())
+        .arg(
+            Arg::with_name("input")
+                .short("i")
+                .long("input")
+                .value_name("IDir")
+                .help("Input directory with configuration to parse")
+                .takes_value(true)
+                .required(true),
+        )
+        .arg(
+            Arg::with_name("output")
+                .short("o")
+                .long("output")
+                .value_name("ODir")
+                .help("Output directory with parsed configuration ")
+                .takes_value(true)
+                .required(true),
+        )
+        .get_matches();
 
-    let matches = App::new("converter").author(crate_authors!()).get_matches();
-    
-    let entries = fs::read_dir("./samples/stm32").unwrap();
+    let input_dir = matches.value_of("input").unwrap();
+    let output_dir = matches.value_of("output").unwrap();
+
+    let entries = fs::read_dir(input_dir).unwrap();
 
     lazy_static! {
         static ref RE :Regex = Regex::new(r"(families)|(^STM32[FL]\d{3})|(UART)|(TIM)|(GPIO)|(NVIC)|(RCC)").unwrap();
@@ -89,61 +111,48 @@ fn main() {
     for entry in entries {
         let path = entry.unwrap().path();
         if path.is_file() {
-            let filename =  path.file_name().unwrap().to_str().unwrap();
+            let filename = path.file_name().unwrap().to_str().unwrap();
             println!("Filename: {}", filename);
             let caps = RE.captures(filename);
 
             for cap in caps {
                 // Families
                 if let Some(c) = cap.get(1) {
-
                     println!("Families: {}", c.as_str());
-                    }
+                }
                 // MCU
                 else if let Some(c) = cap.get(2) {
-
                     println!("Parse MCU: {}", c.as_str());
                     open_mcu(path.as_path());
-                    }
+                }
                 // UART
                 else if let Some(c) = cap.get(3) {
-
                     println!("Parse UART: {}", c.as_str());
-                    //open_uart(path.as_path());
-                    }
+                //open_uart(path.as_path());
+                }
                 // TIM
                 else if let Some(c) = cap.get(4) {
-
                     println!("Parse TIM: {}", c.as_str());
                     open_tim(path.as_path());
-                    }
+                }
                 // GPIO
                 else if let Some(c) = cap.get(5) {
-
                     println!("Parse GPIO: {}", c.as_str());
                     open_gpio(path.as_path());
-                    }
+                }
                 // NVIC
                 else if let Some(c) = cap.get(6) {
-
                     println!("Parse NVIC: {}", c.as_str());
                     open_nvic(path.as_path());
-                    }
+                }
                 // RCC
                 else if let Some(c) = cap.get(7) {
-
                     println!("Parse RCC: {}", c.as_str());
                     open_rcc(path.as_path());
-                    }
-                else {
+                } else {
 
-                    }
                 }
+            }
         }
-        /*
-        let file = path.unwrap().path().to_str().unwrap();
-        //println!("Name: {}", path.unwrap().path().display());
-        
-        */
     }
 }
