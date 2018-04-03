@@ -9,101 +9,40 @@ extern crate serde;
 extern crate serde_derive;
 extern crate serde_json;
 extern crate serde_xml_rs;
-
+#[macro_use]
+extern crate error_chain;
 extern crate mcu;
 
+use errors::*;
+
+mod errors;
 pub mod stm32;
 
 use clap::{App, Arg};
 use regex::Regex;
-
-use std::error;
-use std::fmt;
 
 use serde::Deserialize;
 
 use stm32::mcu::MCU;
 use stm32::gpio::GPIO;
 use stm32::nvic::NVIC;
-use stm32::dma::DMA;
 use stm32::rcc::RCC;
 use stm32::tim::TIM;
 
-use std::io;
 use std::fs::File;
 use std::fs;
 use std::path::{Path, PathBuf};
 
-#[derive(Debug)]
-enum ConverterError {
-    Io(io::Error),
-    SerdeXML(serde_xml_rs::Error),
-    SerdeJSON(serde_json::Error)
-}
-
-impl fmt::Display for ConverterError {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match *self {
-            // Both underlying errors already impl `Display`, so we defer to
-            // their implementations.
-            ConverterError::Io(ref err) => write!(f, "IO error: {}", err),
-            ConverterError::SerdeXML(ref err) => write!(f, "Serde error: {}", err),
-            ConverterError::SerdeJSON(ref err) => write!(f, "Serde error: {}", err),
-        }
-    }
-}
-
-impl error::Error for ConverterError {
-    fn description(&self) -> &str {
-        // Both underlying errors already impl `Error`, so we defer to their
-        // implementations.
-        match *self {
-            ConverterError::Io(ref err) => err.description(),
-            ConverterError::SerdeXML(ref err) => err.description(),
-            ConverterError::SerdeJSON(ref err) => err.description(),
-        }
-    }
-
-    fn cause(&self) -> Option<&error::Error> {
-        match *self {
-            // N.B. Both of these implicitly cast `err` from their concrete
-            // types (either `&io::Error` or `&num::ParseIntError`)
-            // to a trait object `&Error`. This works because both error types
-            // implement `Error`.
-            ConverterError::Io(ref err) => Some(err),
-            ConverterError::SerdeXML(ref err) => Some(err),
-            ConverterError::SerdeJSON(ref err) => Some(err),
-        }
-    }
-}
-
-impl From<io::Error> for ConverterError {
-    fn from(err: io::Error) -> ConverterError {
-        ConverterError::Io(err)
-    }
-}
-
-impl From<serde_xml_rs::Error> for ConverterError {
-    fn from(err: serde_xml_rs::Error) -> ConverterError {
-        ConverterError::SerdeXML(err)
-    }
-}
-
-impl From<serde_json::Error> for ConverterError {
-    fn from(err: serde_json::Error) -> ConverterError {
-        ConverterError::SerdeJSON(err)
-    }
-}
-
-fn open_mcu(path: &Path, output_dir: &str) -> Result<(), ConverterError>{
+fn open_mcu(path: &Path, output_dir: &str) -> Result<()>{
     let file = File::open(path)?;
     let mcu: MCU = serde_xml_rs::deserialize(file)?;
-    let mcu_pegasus = mcu.to_pegasus();
+    let mcu_pegasus = mcu.to_pegasus()?;
 
     let mut filename = PathBuf::new();
     filename.push(".");
-    filename.push(output_dir);
-    filename.set_file_name(path.file_stem().unwrap());
+    filename.push("output_dir");
+    let filename_str = path.file_stem().ok_or("")?;
+    filename.set_file_name(filename_str);
     filename.set_extension("json");
 
     let file_json = File::create(Path::new(&filename))?;
@@ -112,7 +51,7 @@ fn open_mcu(path: &Path, output_dir: &str) -> Result<(), ConverterError>{
     Ok(())
 }
 
-fn open_cfg<'a, T: Deserialize<'a>>(path: &Path) -> Result<(), ConverterError> {
+fn open_cfg<'a, T: Deserialize<'a>>(path: &Path) -> Result<()> {
     let file = File::open(path)?;
 
     let cfg: T = serde_xml_rs::deserialize(file)?;
@@ -121,9 +60,9 @@ fn open_cfg<'a, T: Deserialize<'a>>(path: &Path) -> Result<(), ConverterError> {
     Ok(())
 }
 
-fn run(input_dir: &str, output_dir: &str) -> Result<(), ConverterError> {
+fn run(input_dir: &str, output_dir: &str) -> Result<()> {
 
-    let entries = fs::read_dir(input_dir).unwrap();
+    let entries = fs::read_dir(input_dir)?;
 
     lazy_static! {
         static ref RE :Regex = Regex::new(r"(families)|(^STM32[FL]\d{3})|(UART)|(TIM)|(GPIO)|(NVIC)|(RCC)").unwrap();
@@ -132,8 +71,9 @@ fn run(input_dir: &str, output_dir: &str) -> Result<(), ConverterError> {
     for entry in entries {
         let path = entry.unwrap().path();
         if path.is_file() {
-            let filename = path.file_name().unwrap().to_str().unwrap();
-            println!("Filename: {}[{}]", filename, path.to_str().unwrap());
+            let filename = path.file_name().unwrap().to_str().ok_or("")?;
+            let path_str = path.to_str().ok_or("")?;
+            println!("Filename: {}[{}]", filename, path_str);
             let caps = RE.captures(filename);
 
             for cap in caps {
@@ -207,6 +147,16 @@ fn main() {
     let output_dir = matches.value_of("output").unwrap();
 
     if let Err(e) = run(input_dir, output_dir) {
-        println!("Error: {}", e);
+
+        match e.kind() {
+            &ErrorKind::Msg(ref s) => println!("Msg: {}",s),
+            &ErrorKind::Io(ref s) => println!("Io: {}", s),
+            &ErrorKind::SerdeXML(ref s) => println!("Serde XML: {}", s),
+            &ErrorKind::SerdeJSON(ref s) => println!("Serde JSON: {}", s),
+            &ErrorKind::Parse(ref s) => println!("Parse: {}", s),
+            _ => panic!("Unknown error")
+        }
+
+        std::process::exit(1);
     }
 }

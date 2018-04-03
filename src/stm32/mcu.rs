@@ -5,6 +5,7 @@ use mcu::pin::PinBuilder;
 use mcu::mcu::{ARMCore, Core, Frequency, Platform};
 
 use regex::Regex;
+use errors::*;
 
 #[allow(non_snake_case)]
 #[derive(Debug, Deserialize)]
@@ -51,15 +52,15 @@ pub struct MCU {
     #[serde(rename = "Pin")] Pins: Vec<Pin>,
 }
 
-// TODO: Refactor into methods
 impl MCU {
-    pub fn to_pegasus(self) -> ::mcu::mcu::MCU {
+    pub fn to_pegasus(self) -> Result<::mcu::mcu::MCU> {
+
         let mut memories = Vec::new();
 
         self.parse_flash(&mut memories);
         self.parse_ram(&mut memories);
 
-        let frequency = self.parse_frequency();
+        let frequency = self.parse_frequency()?;
         
         let core = self.parse_core();
 
@@ -84,7 +85,7 @@ impl MCU {
 
                 let caps = RE.captures(&pin.Position).unwrap();
 
-                let count = caps.get(2).unwrap().as_str().parse::<u16>().unwrap();
+                let count = caps.get(2).unwrap().as_str().parse::<u16>()?;
 
                 match caps.get(1).unwrap().as_str() {
                     "A" => Position::Grid(0, count as u8),
@@ -107,7 +108,8 @@ impl MCU {
                     _ => Position::Grid(0, 0),
                 }
             } else {
-                Position::Linear(pin.Position.parse::<u16>().unwrap())
+                let pos = pin.Position.parse::<u16>()?;
+                Position::Linear(pos)
             };
 
             let mut pin2store = PinBuilder::new(&pin.Type, pos, &pin.Name);
@@ -127,7 +129,7 @@ impl MCU {
             pins.push(p);
         }
 
-        ::mcu::mcu::MCU {
+        Ok(::mcu::mcu::MCU {
             memory: memories,
             frequency: frequency,
             core: core,
@@ -139,21 +141,18 @@ impl MCU {
             package: package,
             ips: ips,
             pins: pins,
-        }
+        })
     }
 
     fn parse_flash(&self, memories: &mut Vec<Memory>) {
 
         for flash in self.Flash.iter() {
 
-            let flash_val = match flash.parse::<u32>() {
-                Ok(v) => v * 1024,
-                Err(e) => { println!("Flash: {:?}", e); 0},
-            };
+            let flash_val = flash.parse::<u32>().unwrap();
 
             let flash = Memory::Flash {
                 start: 0x08000000,
-                size: flash_val,
+                size: flash_val * 1024,
             };
             memories.push(flash);
         }
@@ -163,28 +162,22 @@ impl MCU {
 
         for ram in self.Ram.iter() {
 
-            let ram_val = match ram.parse::<u32>() {
-                Ok(v) => v * 1024,
-                Err(e) => { println!("Ram: {:?}", e); 0},
-            };
+            let ram_val = ram.parse::<u32>().unwrap();
 
             let ram = Memory::Ram {
                 start: 0x20000000,
-                size: ram_val,
+                size: ram_val * 1024,
             };
 
             memories.push(ram);
         }
     }
 
-    fn parse_frequency (&self) -> Frequency {
+    fn parse_frequency (&self) -> Result<Frequency> {
 
-        let frequency_val = match self.Frequency.parse::<u16>() {
-                Ok(v) => v,
-                Err(e) => { println!("Flash: {:?}", e); 0},
-            };
+        let frequency_val = self.Frequency.parse::<u16>()?;
 
-        Frequency::MHz(frequency_val)
+        Ok(Frequency::MHz(frequency_val))
     }
 
     fn parse_core(&self) -> Core {
