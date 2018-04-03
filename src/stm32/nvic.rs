@@ -21,8 +21,11 @@ struct PossibleValue {
     Value: String,
 }
 
-impl NVIC {
-    pub fn to_pegasus(self) -> IRQS {
+use errors::*;
+use Export;
+
+impl Export<IRQS> for NVIC {
+    fn export(self) -> Result<IRQS> {
         let mut irqs = Vec::new();
 
         for param in self.RefParams.into_iter() {
@@ -40,6 +43,6 @@ impl NVIC {
             }
         }
 
-        IRQS { irqs: irqs }
+        Ok(IRQS { irqs: irqs })
     }
 }

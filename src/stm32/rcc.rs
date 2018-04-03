@@ -67,6 +67,11 @@ struct Signal {
     Name: String,
 }
 
-impl RCC {
-    pub fn to_pegasus(self) {}
+use errors::*;
+use Export;
+
+impl Export<()> for RCC {
+    fn export(self) -> Result<()> {
+        Ok(())
+    }
 }

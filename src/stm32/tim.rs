@@ -86,6 +86,11 @@ struct Signal {
     Name: String,
 }
 
-impl TIM {
-    pub fn to_pegasus(self) {}
+use errors::*;
+use Export;
+
+impl Export<()> for TIM {
+    fn export(self) -> Result<()> {
+        Ok(())
+    }
 }

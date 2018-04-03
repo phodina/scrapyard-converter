@@ -21,7 +21,7 @@ pub mod stm32;
 use clap::{App, Arg};
 use regex::Regex;
 
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
 use stm32::mcu::MCU;
 use stm32::gpio::GPIO;
@@ -29,38 +29,36 @@ use stm32::nvic::NVIC;
 use stm32::rcc::RCC;
 use stm32::tim::TIM;
 
+use mcu::irqs::IRQS;
+
 use std::fs::File;
 use std::fs;
 use std::path::{Path, PathBuf};
 
-trait Export<T> {
-    fn export() -> T;
+pub trait Export<T> {
+    fn export(self) -> Result<T>;
 }
 
-fn open_mcu(path: &Path, output_dir: &str) -> Result<()> {
+fn open_cfg<'a, T: Deserialize<'a> + Export<E>, E: Serialize>(
+    path: &Path,
+    output_dir: &str,
+) -> Result<()> {
     let file = File::open(path)?;
-    let mcu: MCU = serde_xml_rs::deserialize(file)?;
-    let mcu_pegasus = mcu.to_pegasus()?;
+
+    let cfg: T = serde_xml_rs::deserialize(file)?;
+
+    let cfg_export = cfg.export()?;
 
     let mut filename = PathBuf::new();
     filename.push(".");
-    filename.push("output_dir");
+    filename.push(output_dir);
     let filename_str = path.file_stem().ok_or("")?;
     filename.set_file_name(filename_str);
     filename.set_extension("json");
 
     let file_json = File::create(Path::new(&filename))?;
-    serde_json::to_writer(file_json, &mcu_pegasus)?;
+    serde_json::to_writer(file_json, &cfg_export).unwrap();
 
-    Ok(())
-}
-
-fn open_cfg<'a, T: Deserialize<'a>>(path: &Path) -> Result<()> {
-    let file = File::open(path)?;
-
-    let cfg: T = serde_xml_rs::deserialize(file)?;
-
-    //println!("{:?}", tim);
     Ok(())
 }
 
@@ -87,7 +85,7 @@ fn run(input_dir: &str, output_dir: &str) -> Result<()> {
                 // MCU
                 else if let Some(c) = cap.get(2) {
                     println!("Parse MCU: {}", c.as_str());
-                    open_mcu(path.as_path(), output_dir)?;
+                    open_cfg::<MCU, ::mcu::mcu::MCU>(path.as_path(), output_dir)?;
                 }
                 // UART
                 else if let Some(c) = cap.get(3) {
@@ -97,22 +95,22 @@ fn run(input_dir: &str, output_dir: &str) -> Result<()> {
                 // TIM
                 else if let Some(c) = cap.get(4) {
                     println!("Parse TIM: {}", c.as_str());
-                    open_cfg::<TIM>(path.as_path())?;
+                    open_cfg::<TIM, ()>(path.as_path(), output_dir)?;
                 }
                 // GPIO
                 else if let Some(c) = cap.get(5) {
                     println!("Parse GPIO: {}", c.as_str());
-                    open_cfg::<GPIO>(path.as_path())?;
+                    open_cfg::<GPIO, ()>(path.as_path(), output_dir)?;
                 }
                 // NVIC
                 else if let Some(c) = cap.get(6) {
                     println!("Parse NVIC: {}", c.as_str());
-                    open_cfg::<NVIC>(path.as_path())?;
+                    open_cfg::<NVIC, IRQS>(path.as_path(), output_dir)?;
                 }
                 // RCC
                 else if let Some(c) = cap.get(7) {
                     println!("Parse RCC: {}", c.as_str());
-                    open_cfg::<RCC>(path.as_path())?;
+                    open_cfg::<RCC, ()>(path.as_path(), output_dir)?;
                 } else {
 
                 }

@@ -52,8 +52,10 @@ pub struct MCU {
     #[serde(rename = "Pin")] Pins: Vec<Pin>,
 }
 
-impl MCU {
-    pub fn to_pegasus(self) -> Result<::mcu::mcu::MCU> {
+use Export;
+
+impl Export<::mcu::mcu::MCU> for MCU {
+    fn export(self) -> Result<::mcu::mcu::MCU> {
         let mut memories = Vec::new();
 
         self.parse_flash(&mut memories);
@@ -153,7 +155,9 @@ impl MCU {
             pins: pins,
         })
     }
+}
 
+impl MCU {
     fn parse_flash(&self, memories: &mut Vec<Memory>) {
         for flash in self.Flash.iter() {
             let flash_val = flash.parse::<u32>().unwrap();

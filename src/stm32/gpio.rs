@@ -43,9 +43,13 @@ struct SpecificParameter {
     PossibleValue: String,
 }
 
-impl GPIO {
-/*
-    pub fn to_pegasus(self) -> ::pegasus::gpio::GPIO {
+use errors::*;
+use Export;
+
+impl Export<()> for GPIO {
+    fn export(self) -> Result<()> {
+        Ok(())
+        /*
         let mut pins: Vec<::pegasus::gpio::Pin> = Vec::new();
         for pin in self.Pins {
             let mut signals_p: Vec<::pegasus::gpio::Signal> = Vec::new();
@@ -68,5 +72,6 @@ impl GPIO {
         }
 
         ::pegasus::gpio::GPIO { pins: pins }
-    }*/
+        */
+    }
 }
