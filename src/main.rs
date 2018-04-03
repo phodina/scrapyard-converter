@@ -20,6 +20,8 @@ use regex::Regex;
 use std::error;
 use std::fmt;
 
+use serde::Deserialize;
+
 use stm32::mcu::MCU;
 use stm32::gpio::GPIO;
 use stm32::nvic::NVIC;
@@ -108,47 +110,71 @@ fn open_mcu(path: &Path) -> Result<(), ConverterError>{
     Ok(())
 }
 
-fn open_gpio(path: &Path) -> Result<(), ConverterError>{
+fn open_cfg<'a, T: Deserialize<'a>>(path: &Path) -> Result<(), ConverterError> {
     let file = File::open(path)?;
 
-    let gpio: GPIO = serde_xml_rs::deserialize(file)?;
-    //let gpio_pegasus = gpio.to_pegasus();
-    //println!("{:?}", gpio_pegasus);
-    Ok(())
-}
-
-fn open_nvic(path: &Path) -> Result<(), ConverterError> {
-    let file = File::open(path)?;
-
-    let nvic: NVIC = serde_xml_rs::deserialize(file)?;
-    //nvic.to_pegasus();
-    Ok(())
-}
-
-fn open_dma(path: &Path) -> Result<(), ConverterError> {
-    let file = File::open(path)?;
-
-    let dma: DMA = serde_xml_rs::deserialize(file)?;
-
-    //println!("{:?}", dma);
-    Ok(())
-}
-
-fn open_rcc(path: &Path) -> Result<(), ConverterError> {
-    let file = File::open(path)?;
-
-    let rcc: RCC = serde_xml_rs::deserialize(file)?;
-
-    //println!("{:?}", rcc);
-    Ok(())
-}
-
-fn open_tim(path: &Path) -> Result<(), ConverterError> {
-    let file = File::open(path)?;
-
-    let tim: TIM = serde_xml_rs::deserialize(file)?;
+    let cfg: T = serde_xml_rs::deserialize(file)?;
 
     //println!("{:?}", tim);
+    Ok(())
+}
+
+fn run(input_dir: &str) -> Result<(), ConverterError> {
+
+    let entries = fs::read_dir(input_dir).unwrap();
+
+    lazy_static! {
+        static ref RE :Regex = Regex::new(r"(families)|(^STM32[FL]\d{3})|(UART)|(TIM)|(GPIO)|(NVIC)|(RCC)").unwrap();
+    }
+
+    for entry in entries {
+        let path = entry.unwrap().path();
+        if path.is_file() {
+            let filename = path.file_name().unwrap().to_str().unwrap();
+            println!("Filename: {}[{}]", filename, path.to_str().unwrap());
+            let caps = RE.captures(filename);
+
+            for cap in caps {
+                // Families
+                if let Some(c) = cap.get(1) {
+                    println!("Families: {}", c.as_str());
+                }
+                // MCU
+                else if let Some(c) = cap.get(2) {
+                    println!("Parse MCU: {}", c.as_str());
+                    open_mcu(path.as_path())?;
+                }
+                // UART
+                else if let Some(c) = cap.get(3) {
+                    println!("Parse UART: {}", c.as_str());
+                    //open_cfg::<UART>(path.as_path());
+                }
+                // TIM
+                else if let Some(c) = cap.get(4) {
+                    println!("Parse TIM: {}", c.as_str());
+                    open_cfg::<TIM>(path.as_path())?;
+                }
+                // GPIO
+                else if let Some(c) = cap.get(5) {
+                    println!("Parse GPIO: {}", c.as_str());
+                    open_cfg::<GPIO>(path.as_path())?;
+                }
+                // NVIC
+                else if let Some(c) = cap.get(6) {
+                    println!("Parse NVIC: {}", c.as_str());
+                    open_cfg::<NVIC>(path.as_path())?;
+                }
+                // RCC
+                else if let Some(c) = cap.get(7) {
+                    println!("Parse RCC: {}", c.as_str());
+                    open_cfg::<RCC>(path.as_path())?;
+                } else {
+
+                }
+            }
+        }
+    }
+
     Ok(())
 }
 
@@ -178,57 +204,12 @@ fn main() {
     let input_dir = matches.value_of("input").unwrap();
     let output_dir = matches.value_of("output").unwrap();
 
-    let entries = fs::read_dir(input_dir).unwrap();
-
-    lazy_static! {
-        static ref RE :Regex = Regex::new(r"(families)|(^STM32[FL]\d{3})|(UART)|(TIM)|(GPIO)|(NVIC)|(RCC)").unwrap();
-    }
-
-    for entry in entries {
-        let path = entry.unwrap().path();
-        if path.is_file() {
-            let filename = path.file_name().unwrap().to_str().unwrap();
-            println!("Filename: {}[{}]", filename, path.to_str().unwrap());
-            let caps = RE.captures(filename);
-
-            for cap in caps {
-                // Families
-                if let Some(c) = cap.get(1) {
-                    println!("Families: {}", c.as_str());
-                }
-                // MCU
-                else if let Some(c) = cap.get(2) {
-                    println!("Parse MCU: {}", c.as_str());
-                    open_mcu(path.as_path());
-                }
-                // UART
-                else if let Some(c) = cap.get(3) {
-                    println!("Parse UART: {}", c.as_str());
-                //open_uart(path.as_path());
-                }
-                // TIM
-                else if let Some(c) = cap.get(4) {
-                    println!("Parse TIM: {}", c.as_str());
-                    open_tim(path.as_path());
-                }
-                // GPIO
-                else if let Some(c) = cap.get(5) {
-                    println!("Parse GPIO: {}", c.as_str());
-                    open_gpio(path.as_path());
-                }
-                // NVIC
-                else if let Some(c) = cap.get(6) {
-                    println!("Parse NVIC: {}", c.as_str());
-                    open_nvic(path.as_path());
-                }
-                // RCC
-                else if let Some(c) = cap.get(7) {
-                    println!("Parse RCC: {}", c.as_str());
-                    open_rcc(path.as_path());
-                } else {
-
-                }
-            }
-        }
+    if let Err(e) = run(input_dir) {
+        /*
+        match e {
+            ConverterError::Io(ref err) => println!("Error: {}",err.description()),
+            ConverterError::SerdeXML(ref err) => println!("Error: {}",err.description()),
+            ConverterError::SerdeJSON(ref err) => println!("Error: {}",err.description()),
+        }*/
     }
 }
