@@ -95,12 +95,14 @@ impl From<serde_json::Error> for ConverterError {
     }
 }
 
-fn open_mcu(path: &Path) -> Result<(), ConverterError>{
+fn open_mcu(path: &Path, output_dir: &str) -> Result<(), ConverterError>{
     let file = File::open(path)?;
     let mcu: MCU = serde_xml_rs::deserialize(file)?;
     let mcu_pegasus = mcu.to_pegasus();
 
     let mut filename = PathBuf::new();
+    filename.push(".");
+    filename.push(output_dir);
     filename.set_file_name(path.file_stem().unwrap());
     filename.set_extension("json");
 
@@ -119,7 +121,7 @@ fn open_cfg<'a, T: Deserialize<'a>>(path: &Path) -> Result<(), ConverterError> {
     Ok(())
 }
 
-fn run(input_dir: &str) -> Result<(), ConverterError> {
+fn run(input_dir: &str, output_dir: &str) -> Result<(), ConverterError> {
 
     let entries = fs::read_dir(input_dir).unwrap();
 
@@ -142,7 +144,7 @@ fn run(input_dir: &str) -> Result<(), ConverterError> {
                 // MCU
                 else if let Some(c) = cap.get(2) {
                     println!("Parse MCU: {}", c.as_str());
-                    open_mcu(path.as_path())?;
+                    open_mcu(path.as_path(), output_dir)?;
                 }
                 // UART
                 else if let Some(c) = cap.get(3) {
@@ -204,12 +206,7 @@ fn main() {
     let input_dir = matches.value_of("input").unwrap();
     let output_dir = matches.value_of("output").unwrap();
 
-    if let Err(e) = run(input_dir) {
-        /*
-        match e {
-            ConverterError::Io(ref err) => println!("Error: {}",err.description()),
-            ConverterError::SerdeXML(ref err) => println!("Error: {}",err.description()),
-            ConverterError::SerdeJSON(ref err) => println!("Error: {}",err.description()),
-        }*/
+    if let Err(e) = run(input_dir, output_dir) {
+        println!("Error: {}", e);
     }
 }

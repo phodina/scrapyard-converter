@@ -42,11 +42,11 @@ pub struct MCU {
     Package: String,
     RefName: String,
     Core: String,
-    Frequency: i32,
-    Ram: Vec<i32>,
-    IONb: i32,
+    Frequency: String,
+    Ram: Vec<String>,
+    IONb: String,
     Die: String,
-    Flash: Vec<i32>,
+    Flash: Vec<String>,
     #[serde(rename = "IP")] IPs: Vec<IP>,
     #[serde(rename = "Pin")] Pins: Vec<Pin>,
 }
@@ -56,34 +56,12 @@ impl MCU {
     pub fn to_pegasus(self) -> ::mcu::mcu::MCU {
         let mut memories = Vec::new();
 
-        for flash in self.Flash {
-            let flash = Memory::Flash {
-                start: 0x08000000,
-                size: flash as u32 * 1024,
-            };
-            memories.push(flash);
-        }
+        self.parse_flash(&mut memories);
+        self.parse_ram(&mut memories);
 
-        for ram in self.Ram {
-            let ram = Memory::Ram {
-                start: 0x20000000,
-                size: ram as u32 * 1024,
-            };
-
-            memories.push(ram);
-        }
-
-        // TODO: Handle sign & overflow
-        let frequency = Frequency::MHz(self.Frequency as u16);
-
-        // TODO: Handle unknown core
-        let core = match self.Core.as_ref() {
-            "ARM Cortex-M0" => Core::ARM(ARMCore::CortexM0),
-            "ARM Cortex-M3" => Core::ARM(ARMCore::CortexM3),
-            "ARM Cortex-M4" => Core::ARM(ARMCore::CortexM4),
-            "ARM Cortex-M7" => Core::ARM(ARMCore::CortexM7),
-            _ => Core::AVR,
-        };
+        let frequency = self.parse_frequency();
+        
+        let core = self.parse_core();
 
         let package = Package::new(&self.Package);
 
@@ -161,6 +139,62 @@ impl MCU {
             package: package,
             ips: ips,
             pins: pins,
+        }
+    }
+
+    fn parse_flash(&self, memories: &mut Vec<Memory>) {
+
+        for flash in self.Flash.iter() {
+
+            let flash_val = match flash.parse::<u32>() {
+                Ok(v) => v * 1024,
+                Err(e) => { println!("Flash: {:?}", e); 0},
+            };
+
+            let flash = Memory::Flash {
+                start: 0x08000000,
+                size: flash_val,
+            };
+            memories.push(flash);
+        }
+    }
+
+    fn parse_ram(&self, memories: &mut Vec<Memory>) {
+
+        for ram in self.Ram.iter() {
+
+            let ram_val = match ram.parse::<u32>() {
+                Ok(v) => v * 1024,
+                Err(e) => { println!("Ram: {:?}", e); 0},
+            };
+
+            let ram = Memory::Ram {
+                start: 0x20000000,
+                size: ram_val,
+            };
+
+            memories.push(ram);
+        }
+    }
+
+    fn parse_frequency (&self) -> Frequency {
+
+        let frequency_val = match self.Frequency.parse::<u16>() {
+                Ok(v) => v,
+                Err(e) => { println!("Flash: {:?}", e); 0},
+            };
+
+        Frequency::MHz(frequency_val)
+    }
+
+    fn parse_core(&self) -> Core {
+        // TODO: Handle unknown core
+        match self.Core.as_ref() {
+            "ARM Cortex-M0" => Core::ARM(ARMCore::CortexM0),
+            "ARM Cortex-M3" => Core::ARM(ARMCore::CortexM3),
+            "ARM Cortex-M4" => Core::ARM(ARMCore::CortexM4),
+            "ARM Cortex-M7" => Core::ARM(ARMCore::CortexM7),
+            _ => Core::AVR,
         }
     }
 }
