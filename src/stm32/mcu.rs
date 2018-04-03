@@ -2,6 +2,7 @@ use mcu::memory::Memory;
 use mcu::package::Package;
 use mcu::pin::Position;
 use mcu::pin::PinBuilder;
+use mcu::mcu::{ARMCore, Core, Frequency, Platform};
 
 use regex::Regex;
 
@@ -50,34 +51,49 @@ pub struct MCU {
     #[serde(rename = "Pin")] Pins: Vec<Pin>,
 }
 
+// TODO: Refactor into methods
 impl MCU {
     pub fn to_pegasus(self) -> ::mcu::mcu::MCU {
-
         let mut memories = Vec::new();
 
         for flash in self.Flash {
             let flash = Memory::Flash {
                 start: 0x08000000,
-                size: flash as u32,
+                size: flash as u32 * 1024,
             };
             memories.push(flash);
-            }
+        }
 
         for ram in self.Ram {
             let ram = Memory::Ram {
                 start: 0x20000000,
-                size: ram as u32,
+                size: ram as u32 * 1024,
             };
 
             memories.push(ram);
-            }
+        }
+
+        // TODO: Handle sign & overflow
+        let frequency = Frequency::MHz(self.Frequency as u16);
+
+        // TODO: Handle unknown core
+        let core = match self.Core.as_ref() {
+            "ARM Cortex-M0" => Core::ARM(ARMCore::CortexM0),
+            "ARM Cortex-M3" => Core::ARM(ARMCore::CortexM3),
+            "ARM Cortex-M4" => Core::ARM(ARMCore::CortexM4),
+            "ARM Cortex-M7" => Core::ARM(ARMCore::CortexM7),
+            _ => Core::AVR,
+        };
 
         let package = Package::new(&self.Package);
 
         let mut ips: Vec<::mcu::mcu::IP> = Vec::with_capacity(self.IPs.len());
 
         for ip in self.IPs {
-            ips.push(::mcu::mcu::IP{ name: ip.Name, config_file: ip.Version});
+            ips.push(::mcu::mcu::IP {
+                name: ip.Name,
+                config_file: ip.Version,
+            });
         }
 
         let mut pins: Vec<::mcu::pin::Pin> = Vec::with_capacity(self.Pins.len());
@@ -119,7 +135,6 @@ impl MCU {
             let mut pin2store = PinBuilder::new(&pin.Type, pos, &pin.Name);
 
             if let Some(signals) = pin.Signals {
-
                 let mut sigs: Vec<String> = Vec::new();
                 for sig in signals {
                     if let Some(name) = sig.Name {
@@ -136,9 +151,13 @@ impl MCU {
 
         ::mcu::mcu::MCU {
             memory: memories,
-            frequency: self.Frequency as u32,
-            core: self.Core,
+            frequency: frequency,
+            core: core,
             name: self.RefName,
+            platform: Platform::STM32 {
+                family: self.Family,
+                line: self.Line,
+            },
             package: package,
             ips: ips,
             pins: pins,
