@@ -2,16 +2,16 @@
 extern crate clap;
 extern crate either;
 #[macro_use]
+extern crate error_chain;
+#[macro_use]
 extern crate lazy_static;
+extern crate mcu;
 extern crate regex;
 extern crate serde;
 #[macro_use]
 extern crate serde_derive;
 extern crate serde_json;
 extern crate serde_xml_rs;
-#[macro_use]
-extern crate error_chain;
-extern crate mcu;
 
 use errors::*;
 
@@ -33,7 +33,11 @@ use std::fs::File;
 use std::fs;
 use std::path::{Path, PathBuf};
 
-fn open_mcu(path: &Path, output_dir: &str) -> Result<()>{
+trait Export<T> {
+    fn export() -> T;
+}
+
+fn open_mcu(path: &Path, output_dir: &str) -> Result<()> {
     let file = File::open(path)?;
     let mcu: MCU = serde_xml_rs::deserialize(file)?;
     let mcu_pegasus = mcu.to_pegasus()?;
@@ -61,7 +65,6 @@ fn open_cfg<'a, T: Deserialize<'a>>(path: &Path) -> Result<()> {
 }
 
 fn run(input_dir: &str, output_dir: &str) -> Result<()> {
-
     let entries = fs::read_dir(input_dir)?;
 
     lazy_static! {
@@ -89,7 +92,7 @@ fn run(input_dir: &str, output_dir: &str) -> Result<()> {
                 // UART
                 else if let Some(c) = cap.get(3) {
                     println!("Parse UART: {}", c.as_str());
-                    //open_cfg::<UART>(path.as_path());
+                //open_cfg::<UART>(path.as_path());
                 }
                 // TIM
                 else if let Some(c) = cap.get(4) {
@@ -147,14 +150,13 @@ fn main() {
     let output_dir = matches.value_of("output").unwrap();
 
     if let Err(e) = run(input_dir, output_dir) {
-
         match e.kind() {
-            &ErrorKind::Msg(ref s) => println!("Msg: {}",s),
+            &ErrorKind::Msg(ref s) => println!("Msg: {}", s),
             &ErrorKind::Io(ref s) => println!("Io: {}", s),
             &ErrorKind::SerdeXML(ref s) => println!("Serde XML: {}", s),
             &ErrorKind::SerdeJSON(ref s) => println!("Serde JSON: {}", s),
             &ErrorKind::Parse(ref s) => println!("Parse: {}", s),
-            _ => panic!("Unknown error")
+            _ => panic!("Unknown error"),
         }
 
         std::process::exit(1);

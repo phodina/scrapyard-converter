@@ -1,3 +1,5 @@
+use mcu::irqs::{IRQ, IRQS};
+
 #[serde(rename = "IP")]
 #[allow(non_snake_case)]
 #[derive(Deserialize, Debug)]
@@ -20,16 +22,24 @@ struct PossibleValue {
 }
 
 impl NVIC {
-    pub fn to_pegasus(self) {
-        for param in self.RefParams {
+    pub fn to_pegasus(self) -> IRQS {
+        let mut irqs = Vec::new();
+
+        for param in self.RefParams.into_iter() {
             if param.Name == "IRQn" {
                 match param.PossibleValue {
-                    Some(ref value) => for v in value {
+                    Some(value) => for v in value.into_iter() {
                         println!("{} |||  {}", v.Comment, v.Value);
+                        irqs.push(IRQ {
+                            Desc: v.Comment,
+                            Value: v.Value,
+                        });
                     },
                     None => (),
                 }
             }
         }
+
+        IRQS { irqs: irqs }
     }
 }
