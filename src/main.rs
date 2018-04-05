@@ -23,6 +23,7 @@ use regex::Regex;
 
 use serde::{Deserialize, Serialize};
 
+use stm32::families::Families;
 use stm32::mcu::MCU;
 use stm32::gpio::GPIO;
 use stm32::nvic::NVIC;
@@ -81,6 +82,7 @@ fn run(input_dir: &str, output_dir: &str) -> Result<()> {
                 // Families
                 if let Some(c) = cap.get(1) {
                     println!("Families: {}", c.as_str());
+                    open_cfg::<Families, ()>(path.as_path(), output_dir)?;
                 }
                 // MCU
                 else if let Some(c) = cap.get(2) {
