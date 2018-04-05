@@ -34,8 +34,8 @@ impl Export<IRQS> for NVIC {
                     Some(value) => for v in value.into_iter() {
                         println!("{} |||  {}", v.Comment, v.Value);
                         irqs.push(IRQ {
-                            Desc: v.Comment,
-                            Value: v.Value,
+                            desc: v.Comment,
+                            value: v.Value,
                         });
                     },
                     None => (),

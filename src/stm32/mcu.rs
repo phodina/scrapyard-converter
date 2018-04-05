@@ -134,7 +134,7 @@ impl Export<::mcu::mcu::MCU> for MCU {
                     };
                 }
 
-                pin2store = pin2store.signals(sigs);
+                pin2store = pin2store.signals(sigs, 0);
             }
 
             let p = pin2store.finish();
