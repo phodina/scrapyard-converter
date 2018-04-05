@@ -42,7 +42,7 @@ pub trait Export<T> {
 
 fn open_cfg<'a, T: Deserialize<'a> + Export<E>, E: Serialize>(
     path: &Path,
-    output_dir: &str,
+    output_dir: &PathBuf,
 ) -> Result<()> {
     let file = File::open(path)?;
 
@@ -50,21 +50,37 @@ fn open_cfg<'a, T: Deserialize<'a> + Export<E>, E: Serialize>(
 
     let cfg_export = cfg.export()?;
 
-    let mut filename = PathBuf::new();
-    filename.push(".");
-    filename.push(output_dir);
     let filename_str = path.file_stem().ok_or("")?;
+
+    let mut filename = PathBuf::new();
     filename.set_file_name(filename_str);
     filename.set_extension("json");
 
-    let file_json = File::create(Path::new(&filename))?;
+    let mut output_file = PathBuf::new();
+
+    output_file.push(output_dir.as_path());
+    output_file.push(filename.as_path());
+
+    let file_json = File::create(output_file.as_path())?;
     serde_json::to_writer(file_json, &cfg_export).unwrap();
 
     Ok(())
 }
 
-fn run(input_dir: &str, output_dir: &str) -> Result<()> {
+fn run(input_dir: &str, output_dir_str: &str) -> Result<()> {
     let entries = fs::read_dir(input_dir)?;
+
+    let mut output_dir = PathBuf::new();
+
+    output_dir.push(output_dir_str);
+
+    match output_dir.exists() {
+        false => {
+            println!("Creating output directory");
+            std::fs::create_dir_all(output_dir.as_path())?
+        }
+        true => println!("Output directory exists"),
+    }
 
     lazy_static! {
         static ref RE :Regex = Regex::new(r"(families)|(^STM32[FL]\d{3})|(UART)|(TIM)|(GPIO)|(NVIC)|(RCC)").unwrap();
@@ -82,12 +98,12 @@ fn run(input_dir: &str, output_dir: &str) -> Result<()> {
                 // Families
                 if let Some(c) = cap.get(1) {
                     println!("Families: {}", c.as_str());
-                    open_cfg::<Families, ()>(path.as_path(), output_dir)?;
+                    open_cfg::<Families, ()>(path.as_path(), &output_dir)?;
                 }
                 // MCU
                 else if let Some(c) = cap.get(2) {
                     println!("Parse MCU: {}", c.as_str());
-                    open_cfg::<MCU, ::mcu::mcu::MCU>(path.as_path(), output_dir)?;
+                    open_cfg::<MCU, ::mcu::mcu::MCU>(path.as_path(), &output_dir)?;
                 }
                 // UART
                 else if let Some(c) = cap.get(3) {
@@ -97,22 +113,22 @@ fn run(input_dir: &str, output_dir: &str) -> Result<()> {
                 // TIM
                 else if let Some(c) = cap.get(4) {
                     println!("Parse TIM: {}", c.as_str());
-                    open_cfg::<TIM, ()>(path.as_path(), output_dir)?;
+                    open_cfg::<TIM, ()>(path.as_path(), &output_dir)?;
                 }
                 // GPIO
                 else if let Some(c) = cap.get(5) {
                     println!("Parse GPIO: {}", c.as_str());
-                    open_cfg::<GPIO, ()>(path.as_path(), output_dir)?;
+                    open_cfg::<GPIO, ()>(path.as_path(), &output_dir)?;
                 }
                 // NVIC
                 else if let Some(c) = cap.get(6) {
                     println!("Parse NVIC: {}", c.as_str());
-                    open_cfg::<NVIC, IRQS>(path.as_path(), output_dir)?;
+                    open_cfg::<NVIC, IRQS>(path.as_path(), &output_dir)?;
                 }
                 // RCC
                 else if let Some(c) = cap.get(7) {
                     println!("Parse RCC: {}", c.as_str());
-                    open_cfg::<RCC, ()>(path.as_path(), output_dir)?;
+                    open_cfg::<RCC, ()>(path.as_path(), &output_dir)?;
                 } else {
 
                 }

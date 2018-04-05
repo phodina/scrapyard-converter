@@ -21,6 +21,7 @@ struct RefParameter {
 }
 
 #[allow(non_snake_case)]
+#[allow(non_camel_case_types)]
 #[derive(Deserialize, Debug)]
 struct GPIO_Pin {
     PortName: String,
