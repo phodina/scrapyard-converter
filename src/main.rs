@@ -62,7 +62,7 @@ fn open_cfg<'a, T: Deserialize<'a> + Export<E>, E: Serialize>(
     output_file.push(filename.as_path());
 
     let file_json = File::create(output_file.as_path())?;
-    serde_json::to_writer(file_json, &cfg_export).unwrap();
+    serde_json::to_writer(file_json, &cfg_export)?;
 
     Ok(())
 }
